@@ -1,0 +1,8 @@
+{
+   "title": "Coins exchanger",
+   "minPeopleNum": 1,
+   "maxPeopleNum": 50,
+   "minMoneyAmount": 1,
+   "maxMoneyAmount": 50,
+   "coinsValues": [1, 3, 5, 10, 25]
+}

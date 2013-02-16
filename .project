@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>CoinsExchange</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.flexbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.apollobuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.adobe.flexide.project.multiplatform.multiplatformasnature</nature>
+		<nature>com.adobe.flexide.project.multiplatform.multiplatformnature</nature>
+		<nature>com.adobe.flexbuilder.project.apollonature</nature>
+		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>[source path] AzureMobileTheme-source</name>
+			<type>2</type>
+			<location>/Users/alekseynikiforov/Projects/slots/components/feathers-1.0.0/themes/AzureMobileTheme/source</location>
+		</link>
+		<link>
+			<name>[source path] feathers-source</name>
+			<type>2</type>
+			<location>/Users/alekseynikiforov/Projects/slots/components/feathers/source</location>
+		</link>
+		<link>
+			<name>[source path] src</name>
+			<type>2</type>
+			<location>/Users/alekseynikiforov/Projects/slots/components/Starling-Framework/starling/src</location>
+		</link>
+	</linkedResources>
+</projectDescription>
