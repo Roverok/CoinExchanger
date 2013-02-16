@@ -94,6 +94,8 @@ package screens
 		{
 			var settings : Object;
 			settings = JSON.parse(String (e.target.data));
+			
+			CoinsExchanger.maxLoopNumber = settings.maxAlgLoops;
 
 			header = new Header();
 			header.title = settings.title;
@@ -102,7 +104,7 @@ package screens
 			moneySlider = new SliderWithTitle("Select amount of money");
 			moneySlider.minimum = settings.minMoneyAmount;
 			moneySlider.maximum = settings.maxMoneyAmount;
-			moneySlider.step = 1;
+			moneySlider.step = settings.moneyStep;
 			moneySlider.sliderWidth = 500;
 			addChild(moneySlider);
 			
@@ -139,6 +141,7 @@ package screens
 			layout.verticalAlign = HorizontalLayout.VERTICAL_ALIGN_JUSTIFY;
 			resultList.layout = layout;
 			resultList.itemRendererProperties.labelField = "text";
+			resultList.itemRendererProperties.accessoryLabelField = "description";
 			addChild(resultList);
 
 			// Creating physical space
@@ -195,11 +198,17 @@ package screens
 				return;
 			}
 			
-			var result:Array = CoinsExchanger.exchange(2.53, [0.25,0.01,0.1,5,1], 7);
+			var result:Array = CoinsExchanger.exchange(moneySlider.value, coinsValues, peopleNumSlider.value);
 
 			if(result == null)
 			{
 				createFloatingText("No solution");
+				return;
+			}
+
+			if(result.length == 0)
+			{
+				createFloatingText("Need too much time...");
 				return;
 			}
 
@@ -211,7 +220,7 @@ package screens
 			//result = ["0.2","aa ","aa ","aa","bb"];
 			for each(var num:Object in result)
 			{
-				labels.push({ text: "a"+String(num)});
+				labels.push({ text:"", description:num.toString()});
 			}
 			resultList.dataProvider = labels;
 		}

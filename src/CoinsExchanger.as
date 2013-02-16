@@ -5,6 +5,9 @@ package
 		static private var coins		: Array;
 		static private var moneyAmount	: int;
 		static private var peopleNum	: int;
+		static private var loop			: int;
+		
+		static public var maxLoopNumber	: int;
 
 		private static var order:int;
 		
@@ -32,6 +35,7 @@ package
 			
 			coins.sort(Array.NUMERIC | Array.DESCENDING);	
 
+			loop = 0;
 			var result:Array = calc(moneyAmount, []);
 			if(result != null)
 				for(var i:int = 0;i < result.length;i++)
@@ -54,17 +58,16 @@ package
 			
 			for(var pos:int = 0;pos < coins.length;pos++)
 			{
+				loop++;
+				if(loop > maxLoopNumber)
+					return [];
+				
 				loc_res.pop();   
 				var n1:int = coins[pos];
+				
 				loc_res.push(n1);
 				trace(loc_res);
-				if(loc_res[0] == 1 &&
-					loc_res[1] == 1 &&
-					loc_res[2] == 0.25 &&
-					loc_res[3] == 0.25 &&
-					loc_res[4] == 0.01 &&
-					loc_res[5] == 0.01)
-						trace("S");
+				
 				var n2:int = num - n1;
 			
 				if(n2 == 0 && loc_res.length == peopleNum)

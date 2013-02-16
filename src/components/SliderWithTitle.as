@@ -14,11 +14,17 @@ package components
 		private var titleLabel	: Label;
 		private var slider		: Slider;
 		
+		
+		public function get value():Number
+		{
+			return slider.value;			
+		}
+
 		public function get minimum():int
 		{
 			return slider.minimum;			
 		}
-
+		
 		public function set minimum(value:int):void
 		{
 			if(value > slider.maximum)
@@ -37,12 +43,12 @@ package components
 			slider.maximum = value;
 		}
 
-		public function get step():int
+		public function get step():Number
 		{
 			return slider.step;			
 		}
 		
-		public function set step(value:int):void
+		public function set step(value:Number):void
 		{
 			slider.step = value;
 		}

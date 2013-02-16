@@ -1,8 +1,10 @@
 {
    "title": "Coins exchanger",
    "minPeopleNum": 1,
-   "maxPeopleNum": 50,
+   "maxPeopleNum": 100,
    "minMoneyAmount": 1,
-   "maxMoneyAmount": 50,
-   "coinsValues": [1, 3, 5, 10, 25]
+   "maxMoneyAmount": 10,
+   "moneyStep":0.01,
+   "coinsValues": [0.25, 0.01, 0.1, 5, 1],
+   "maxAlgLoops": 100000
 }
