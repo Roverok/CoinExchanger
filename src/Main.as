@@ -4,7 +4,11 @@ package
 	
 	import feathers.controls.ScreenNavigator;
 	import feathers.controls.ScreenNavigatorItem;
+	import feathers.system.DeviceCapabilities;
 	import feathers.themes.AzureMobileTheme;
+	import feathers.themes.MetalWorksMobileTheme;
+	
+	import flash.system.Capabilities;
 	
 	import screens.MainScreen;
 	
@@ -20,7 +24,11 @@ package
 		
 		private function onAddToStage(e:Event):void
 		{
-			var theme:AzureMobileTheme = new AzureMobileTheme(stage);
+			DeviceCapabilities.dpi = 326;
+			DeviceCapabilities.screenPixelWidth = 960;
+			DeviceCapabilities.screenPixelHeight = 640;
+
+			var theme:MetalWorksMobileTheme = new MetalWorksMobileTheme(stage);
 			
 			var navigator:ScreenNavigator = new ScreenNavigator();
 			addChild(navigator);
