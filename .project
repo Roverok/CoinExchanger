@@ -22,21 +22,4 @@
 		<nature>com.adobe.flexbuilder.project.apollonature</nature>
 		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>[source path] AzureMobileTheme-source</name>
-			<type>2</type>
-			<location>/Users/alekseynikiforov/Projects/slots/components/feathers-1.0.0/themes/AzureMobileTheme/source</location>
-		</link>
-		<link>
-			<name>[source path] feathers-source</name>
-			<type>2</type>
-			<location>/Users/alekseynikiforov/Projects/slots/components/feathers/source</location>
-		</link>
-		<link>
-			<name>[source path] src</name>
-			<type>2</type>
-			<location>/Users/alekseynikiforov/Projects/slots/components/Starling-Framework/starling/src</location>
-		</link>
-	</linkedResources>
 </projectDescription>
