@@ -14,7 +14,7 @@ package
 	public class Main extends Sprite
 	{
 		public function Main()
-		{
+		{ 
 			addEventListener(Event.ADDED_TO_STAGE, onAddToStage);
 		}
 		
